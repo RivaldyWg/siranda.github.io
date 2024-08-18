@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header Section -->
+   <header>
+    <nav>
+        <div class="logo">
+          <img src="https://1.bp.blogspot.com/-F-wSxb2UP7M/YHaFGTKFZvI/AAAAAAAACfs/DT3uscq6oJ09pcv2j91AVFIItXtTHMCHQCNcBGAsYHQ/s2048/Kabupaten%2BBandung.png" alt="Kabupaten Bandung Logo">
+
+            <h1>SIRANDA</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <!-- Main Section -->
+    <main>
+        <!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="video-background">
+        <iframe src="https://www.youtube.com/embed/HteQt1mkRfM?autoplay=1&mute=1&loop=1&playlist=HteQt1mkRfM" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+        </iframe>
+        <div class="overlay"></div>
+    </div>
+    <div class="hero-content">
+        <h2>Welcome to My Website</h2>
+        <p>We offer the best services to help you succeed.</p>
+        <a href="#services" class="btn">Learn More</a>
+    </div>
+</section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel mauris quam.</p>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="service-item">
+                <h3>Service 1</h3>
+                <p>Description of service 1.</p>
+            </div>
+            <div class="service-item">
+                <h3>Service 2</h3>
+                <p>Description of service 2.</p>
+            </div>
+            <div class="service-item">
+                <h3>Service 3</h3>
+                <p>Description of service 3.</p>
+            </div>
+        </section>
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+        <form id="contact-form" action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <div id="camera-container">
+                <video id="camera" autoplay></video>
+                <button type="button" id="capture-button">Capture Photo</button>
+                <canvas id="canvas" style="display: none;"></canvas>
+            </div>
+
+            <label for="location">Location:</label>
+            <p id="location">Retrieving location...</p>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div id="image-container">
+            <img id="captured-image" src="" alt="Captured Image" style="display:none;">
+        </div>
+    </div>
+</section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+    
+</body>
+</html>

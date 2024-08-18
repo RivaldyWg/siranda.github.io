@@ -1,0 +1,381 @@
+/* Reset some default styles */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+   body {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+    background-color: #008080; /* warna bedas */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+     position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+header .logo h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+header .nav-links li {
+    margin-left: 20px;
+}
+
+header .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Main section styling */
+main {
+    padding: 20px;
+}
+
+/* Hero section styling */
+.hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none; /* Prevent user interaction with the video */
+    overflow: hidden; /* Ensure the video stays within the container */
+}
+
+.video-background iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Black color with 40% opacity */
+    z-index: 1; /* Ensure it's above the video but below the content */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background-color: #f8b400;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .hero .btn {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .hero .btn {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+}
+
+/* About and Services section styling */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+/* Contact Section Styling */
+#contact {
+    background-color: #fff;
+    padding: 40px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-form {
+    width: 100%;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    background-color: #008080; /* Updated color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #006666;
+}
+
+#camera-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#camera {
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#capture-button {
+    background-color: #f8b400;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#capture-button:hover {
+    background-color: #f5a623;
+}
+
+#image-container {
+    text-align: center;
+}
+
+#captured-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact {
+        padding: 20px 10px;
+    }
+
+    #camera {
+        max-width: 100%;
+    }
+
+    #contact-form button {
+        padding: 8px 15px;
+    }
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    header .nav-links {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    header .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .service-item {
+        padding: 15px;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav {
+        padding: 0 10px;
+    }
+
+    header .nav-links li {
+        margin-left: 0;
+    }
+
+    .hero h2 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .hero .btn {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+
+    section h2 {
+        font-size: 1.2em;
+    }
+    /* Hover Effects for Links and Buttons */
+header .nav-links a:hover {
+    text-decoration: underline;
+}
+
+.hero .btn:hover {
+    background-color: #e6a400;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+}
